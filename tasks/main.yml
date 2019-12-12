@@ -1,0 +1,13 @@
+---
+# tasks file for warning banner setup
+- name: ensure warning banner is configured properly
+  copy:
+    src: "{{ item }}"
+    dest: "/etc/{{ item }}"
+    owner: root
+    group: root
+    mode: '0644'
+  loop:
+    - motd
+    - issue
+    - issue.net

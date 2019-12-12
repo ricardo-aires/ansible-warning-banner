@@ -1,0 +1,8 @@
+---
+- hosts: all
+  become: true
+
+  tasks:
+    - name: apply warning banner setup role
+      include_role:
+        name: ansible-warning-banner
