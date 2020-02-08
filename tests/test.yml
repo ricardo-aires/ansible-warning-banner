@@ -1,8 +1,9 @@
 ---
-- hosts: all
+- name: setup warning banners
+  hosts: motd
   become: true
 
   tasks:
     - name: apply warning banner setup role
       include_role:
-        name: ansible-warning-banner
+        name: kerberos-server
